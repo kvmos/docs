@@ -56,7 +56,7 @@ For better understanding Vue we suggest you to once go through official document
 
 ### Workspace Structure
 
-```txt
+```bash
 riadmin/
 │
 ├── packages/
