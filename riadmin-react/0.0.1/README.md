@@ -53,6 +53,177 @@ For better understanding Vue we suggest you to once go through official document
 - **Documentation Folder**: Contains this documentation you are reading now.
 
 
+
+### Workspace Structure
+
+```txt
+riadmin/
+│
+├── packages/
+│   ├── cms/                    → Main React + ViteJS admin template
+│   │   ├── public/             → Static assets
+│   │   ├── src/                → Application source code
+│   │   ├── vite.config.ts
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   │
+│   ├── color/                  → Theme colors and design tokens
+│   ├── forms/                  → Reusable form system
+│   ├── helpers/                → Shared utility functions
+│   ├── hooks/                  → Custom React hooks
+│   ├── notify/                 → Notification and toast system
+│   ├── types/                  → Shared TypeScript types
+│   └── ui/                     → Shared UI component library
+│
+├── nx.json                     → Nx workspace configuration
+├── lerna.json                  → Lerna package management configuration
+├── pnpm-workspace.yaml         → pnpm workspace configuration
+├── package.json                → Root dependencies and scripts
+└── tsconfig.base.json          → Shared TypeScript configuration
+```
+
+---
+
+#### Architecture Overview
+
+The `cms` package is the main application template built with React and ViteJS.
+
+All other packages inside the `packages/` directory are designed specifically for the CMS application as reusable internal libraries.
+
+This structure helps keep the project:
+
+- Modular
+- Reusable
+- Scalable
+- Maintainable
+- Easy to extend
+
+---
+
+### Packages
+
+#### cms
+
+Main React + ViteJS admin dashboard template.
+
+#### Includes
+
+- Public assets
+- Application pages
+- Routing system
+- Dashboard layouts
+- Authentication pages
+- Vite configuration
+- Application entry setup
+
+---
+
+#### color
+
+Shared color system and design tokens.
+
+##### Features
+
+- Theme palettes
+- Global colors
+- Design token management
+- Dark & light mode support
+
+---
+
+#### forms
+
+Reusable form utilities and components.
+
+#### Features
+
+- Form components
+- Validation helpers
+- Input management
+- Shared form logic
+
+---
+
+#### helpers
+
+Shared utility functions across the workspace.
+
+#### Features
+
+- Date helpers
+- String utilities
+- Object utilities
+- General reusable helpers
+
+---
+
+#### hooks
+
+Reusable custom React hooks.
+
+#### Features
+
+- State hooks
+- UI hooks
+- Lifecycle helpers
+- Shared application hooks
+
+---
+
+### notify
+
+Notification and toast management system.
+
+#### Features
+
+- Toast notifications
+- Alert system
+- Global notification handlers
+
+---
+
+### types
+
+Shared TypeScript interfaces and type definitions.
+
+#### Features
+
+- Shared interfaces
+- API response types
+- Common utility types
+
+---
+
+### ui
+
+Reusable UI component library.
+
+#### Features
+
+- Buttons
+- Inputs
+- Modals
+- Cards
+- Layout components
+- Shared design system
+
+---
+
+### Core Technologies
+
+| Technology | Description |
+|---|---|
+| Nx | Monorepo workspace management |
+| Lerna | Internal package management |
+| pnpm | Fast dependency management |
+| React | Frontend UI library |
+| ViteJS | Frontend build tool |
+| TypeScript | Static typing support |
+
+---
+
+
+
 ###  Project Installation 
 Before running the project, you need to install a few essential tools:
 
@@ -68,7 +239,7 @@ Before running the project, you need to install a few essential tools:
  pnpm install
  ```
  **Start Development Server:** This command starts the development server, enabling you to preview changes live in your browser. By 
-     default, the server runs at `http://localhost:3000/`.
+     default, the server runs at `http://localhost:5173/`.
  ```bash
     pnpm run dev
   ```
@@ -80,8 +251,7 @@ To add a new package to your project, use the following command:
 pnpm add <package-name>
 
 ```
-### layout
-- src > partials a layout structure 
+
 
 
 ### Customizer
